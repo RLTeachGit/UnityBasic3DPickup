@@ -17,8 +17,6 @@
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
-			// make fog work
-			#pragma multi_compile_fog
 
 			#include "UnityCG.cginc"
 
@@ -47,9 +45,8 @@
 
 			fixed4 frag(v2f i) : SV_Target
 			{
-				bool p = fmod(i.uv.x*_RepeatX,2.0) < 1.0;	//Gives a pattern of 0 and 1 across the view
-				bool q = fmod(i.uv.y*_RepeatY,2.0) > 1.0;	//Gives a pattern of 1 and 0 down the view
-
+				int p = fmod(i.uv.x*_RepeatX,2.0) < 1.0;	//Gives a pattern of 0 and 1 across the view
+				int q = fmod(i.uv.y*_RepeatY,2.0) > 1.0;	//Gives a pattern of 1 and 0 down the view
 				return (_TileColor1 * ((p && q) || !(p || q))) + (_TileColor2 * !((p && q) || !(p || q)));	//Draw one colour or the other
 			}
 		ENDCG
