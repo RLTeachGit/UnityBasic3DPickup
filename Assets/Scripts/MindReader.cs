@@ -42,7 +42,7 @@ public class MindReader : MonoBehaviour {
         mText = mDebugTextGO.AddComponent<Text>();
         var tTextRT = mDebugTextGO.GetComponent<RectTransform>();
         mText.fontSize = 30;
-        tTextRT.offsetMax = Vector2.zero;           //Stech text into Canvas and center top
+        tTextRT.offsetMax = Vector2.zero;           //Strech text into Canvas and center top
         tTextRT.offsetMin = Vector2.zero;
         tTextRT.anchorMin = new Vector2(0, 0);
         tTextRT.anchorMax = new Vector2(1, 1);
@@ -67,10 +67,15 @@ public class MindReader : MonoBehaviour {
     //Allow text be set
     public string  Text {  //Set Debug text
         set {
-            mText.text = value;
+            if(mText!=null) {
+                mText.text = value;
+            }
         }
         get {
-            return mText.text;
+            if (mText != null) {
+                return mText.text;
+            }
+            return "NotSet";
         }
     }
 

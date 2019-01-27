@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.4964127, b: 0.57481724, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657856, g: 0.49641234, b: 0.57481724, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -172,6 +172,26 @@ Prefab:
       propertyPath: WaypointList.Array.data[2]
       value: 
       objectReference: {fileID: 88536333}
+    - target: {fileID: 195822720309283882, guid: 821a2228b48ce415f91f5bc96675aef6,
+        type: 2}
+      propertyPath: m_Speed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 195822720309283882, guid: 821a2228b48ce415f91f5bc96675aef6,
+        type: 2}
+      propertyPath: m_AngularSpeed
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 195822720309283882, guid: 821a2228b48ce415f91f5bc96675aef6,
+        type: 2}
+      propertyPath: m_Acceleration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 195822720309283882, guid: 821a2228b48ce415f91f5bc96675aef6,
+        type: 2}
+      propertyPath: m_StoppingDistance
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 821a2228b48ce415f91f5bc96675aef6, type: 2}
   m_IsPrefabAsset: 0
@@ -789,15 +809,18 @@ GameObject:
   - component: {fileID: 1236615380}
   - component: {fileID: 1236615379}
   - component: {fileID: 1236615378}
-  - component: {fileID: 1236615377}
   - component: {fileID: 1236615376}
+  - component: {fileID: 1236615382}
+  - component: {fileID: 1236615384}
+  - component: {fileID: 1236615383}
+  - component: {fileID: 1236615377}
   m_Layer: 0
   m_Name: Grunt1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1236615376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -821,15 +844,15 @@ MonoBehaviour:
 --- !u!114 &1236615377
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 11444856, guid: 7737647c22c1fc64a88d5cd030c352ce,
-    type: 2}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1236615375}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 521b611700410be45810047f0a74e899, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c5335f0882fe4d478883cc8c58ce906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!136 &1236615378
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -887,13 +910,62 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1236615375}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.344, y: 0, z: 0}
+  m_LocalPosition: {x: -4.281, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1331313680}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1236615382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1236615375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7f222afd81dd4cdfb4a87a46c4bc6fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WaypointList:
+  - {fileID: 1747801735}
+  - {fileID: 992249313}
+  - {fileID: 88536333}
+  - {fileID: 2054707536}
+--- !u!195 &1236615383
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1236615375}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 0.5
+  m_Acceleration: 1
+  avoidancePriority: 50
+  m_AngularSpeed: 90
+  m_StoppingDistance: 1
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &1236615384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1236615375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d30324feba05281448f5b3c6acb0501b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TrackMainCamera: 1
 --- !u!4 &1331313680 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400170, guid: d6ea4c04735264c4db7952a4c5c78ed0,
@@ -1171,6 +1243,31 @@ Prefab:
       propertyPath: WaypointList.Array.data[2]
       value: 
       objectReference: {fileID: 1747801735}
+    - target: {fileID: 95224679666839110, guid: 8c26c00e9b72e45dbb037e24ed9a5e75,
+        type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 195362897493805378, guid: 8c26c00e9b72e45dbb037e24ed9a5e75,
+        type: 2}
+      propertyPath: m_Speed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 195362897493805378, guid: 8c26c00e9b72e45dbb037e24ed9a5e75,
+        type: 2}
+      propertyPath: m_AngularSpeed
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 195362897493805378, guid: 8c26c00e9b72e45dbb037e24ed9a5e75,
+        type: 2}
+      propertyPath: m_Acceleration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 195362897493805378, guid: 8c26c00e9b72e45dbb037e24ed9a5e75,
+        type: 2}
+      propertyPath: m_StoppingDistance
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c26c00e9b72e45dbb037e24ed9a5e75, type: 2}
   m_IsPrefabAsset: 0

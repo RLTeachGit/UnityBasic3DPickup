@@ -25,8 +25,7 @@ public class WaypointFollower : Entity {
                 if(mMindReader == null) {       //Lazy initialisation
                     mMindReader = GetComponent<MindReader>();
                 }
-                Debug.Assert(mMindReader != null, "No Mindreader attached");
-            if(mMindReader!=null) {
+            if (mMindReader!=null) {
                 mMindReader.Text = value;
             }
         }
