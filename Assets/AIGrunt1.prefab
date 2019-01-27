@@ -602,6 +602,8 @@ GameObject:
   - component: {fileID: 195362897493805378}
   - component: {fileID: 114999832233850100}
   - component: {fileID: 114563989577265778}
+  - component: {fileID: 114525502531326438}
+  - component: {fileID: 114143845641932926}
   m_Layer: 0
   m_Name: AIGrunt1
   m_TagString: Enemy
@@ -2638,6 +2640,33 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114143845641932926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1454795182672712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d30324feba05281448f5b3c6acb0501b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TrackMainCamera: 1
+--- !u!114 &114525502531326438
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1454795182672712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7f222afd81dd4cdfb4a87a46c4bc6fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WaypointList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &114563989577265778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2654,8 +2683,8 @@ MonoBehaviour:
   m_JumpPower: 6
   m_GravityMultiplier: 2
   m_RunCycleLegOffset: 0.2
-  m_MoveSpeedMultiplier: 1
-  m_AnimSpeedMultiplier: 1
+  m_MoveSpeedMultiplier: 2
+  m_AnimSpeedMultiplier: 2
   m_GroundCheckDistance: 0.3
 --- !u!114 &114999832233850100
 MonoBehaviour:
