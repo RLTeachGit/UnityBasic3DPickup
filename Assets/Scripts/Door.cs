@@ -5,14 +5,10 @@ using UnityEngine;
 public class Door : MonoBehaviour {
 
     Animator mAnimator; //Cached Animator
-
-
     // Use this for initialization
     void Start () {
-        Debug.Assert((mAnimator = GetComponent<Animator>()) != null);   //Grab animator and store
+        Debug.Assert((mAnimator = GetComponent<Animator>()) != null);   //Grab animator and cache
     }
-
-
     public  void    Open() {
         mAnimator.SetTrigger("DoOpen"); //Play open animation
     }
