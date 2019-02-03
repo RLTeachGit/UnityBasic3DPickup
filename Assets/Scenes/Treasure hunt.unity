@@ -1110,23 +1110,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1789726542 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1685322400173158, guid: 2a4962be13e5e433a865d61624d34739,
-    type: 2}
-  m_PrefabInternal: {fileID: 235909855}
---- !u!114 &1789726549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1789726542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d30324feba05281448f5b3c6acb0501b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TrackMainCamera: 1
 --- !u!1 &2003922618
 GameObject:
   m_ObjectHideFlags: 0
@@ -1243,31 +1226,6 @@ Prefab:
       propertyPath: WaypointList.Array.data[2]
       value: 
       objectReference: {fileID: 1747801735}
-    - target: {fileID: 95224679666839110, guid: 8c26c00e9b72e45dbb037e24ed9a5e75,
-        type: 2}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 195362897493805378, guid: 8c26c00e9b72e45dbb037e24ed9a5e75,
-        type: 2}
-      propertyPath: m_Speed
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 195362897493805378, guid: 8c26c00e9b72e45dbb037e24ed9a5e75,
-        type: 2}
-      propertyPath: m_AngularSpeed
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 195362897493805378, guid: 8c26c00e9b72e45dbb037e24ed9a5e75,
-        type: 2}
-      propertyPath: m_Acceleration
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 195362897493805378, guid: 8c26c00e9b72e45dbb037e24ed9a5e75,
-        type: 2}
-      propertyPath: m_StoppingDistance
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c26c00e9b72e45dbb037e24ed9a5e75, type: 2}
   m_IsPrefabAsset: 0
